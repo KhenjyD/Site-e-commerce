@@ -9,3 +9,7 @@ h4 {
 #logo {
     width: 20%;
 }
+
+#article {
+    display: none;
+}
