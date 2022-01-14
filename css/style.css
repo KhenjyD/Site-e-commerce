@@ -1,0 +1,11 @@
+body {
+    background-image: url("/img/deco/bg.jpg");
+}
+
+h4 {
+    color: rgba(255, 255, 255, 0.897);
+}
+
+#logo {
+    width: 20%;
+}
