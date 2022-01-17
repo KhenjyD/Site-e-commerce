@@ -36,12 +36,13 @@ export default class Item {
 
         let price = document.createElement("p");
         price.className = "fw-bold";
-        price.textContent = "Prix: " + this.price + "euro";
+        price.textContent = "Prix: " + this.price + "€";
 
         let buyBtn = document.createElement("button");
         buyBtn.className = "btn btn-primary rounded-pill";
         buyBtn.textContent = "Ajouter au panier";
         buyBtn.id = this.name;
+        buyBtn.name = "buyBtn";
 
         card.appendChild(img);
         card.appendChild(body);

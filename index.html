@@ -110,7 +110,7 @@
 
               <!-- Panier -->
               <div>
-                <button type="button" class="btn btn-light rounded-pill" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="bi bi-cart4"></i> Panier</button>
+                <button type="button" id="triggerCart" class="btn btn-light rounded-pill" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="bi bi-cart4"></i> Panier</button>
 
                 <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
@@ -119,12 +119,12 @@
                         <h5 class="modal-title" id="cartModalLabel">Votre panier</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
-                      <div class="modal-body">
-                        ...
+                      <div id="cart-body" class="modal-body">
+                        
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Retourner aux achats</button>
-                        <button type="button" class="btn btn-danger btn-sm">Vider le panier</button>
+                        <button id="clearCart" type="button" class="btn btn-danger btn-sm">Vider le panier</button>
                         <button type="button" class="btn btn-primary btn-sm">Procéder au paiement</button>
                       </div>
                     </div>
