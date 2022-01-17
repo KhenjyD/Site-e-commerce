@@ -1,16 +1,20 @@
 import {items} from "./bdd.js";
 
 /* Partie fonction */
+
+/* Affiche la page des articles */
 const displayItemsScreen = () => {
     document.getElementById("accueil").style.display = "none";
     document.getElementById("items").style.display = "block";
 }
 
+/* Affiche l'écran d'accueil */
 const displayWelcomeScreen = () => {
     document.getElementById("accueil").style.display = "block";
     document.getElementById("items").style.display = "none";
 }
 
+/* Crée une étiquette pour afficher la catégorie en cours */
 const createCategorySpan = (category) => {
     let title = document.createElement("h2");
     let span = document.createElement("span");
@@ -21,6 +25,7 @@ const createCategorySpan = (category) => {
     return title;
 }
 
+/* Affiche tous les article dans des cards */
 const displayAllItems = () => {
     displayItemsScreen();
     let display = document.getElementById("items");
@@ -35,15 +40,16 @@ const displayAllItems = () => {
     display.appendChild(newRow);
 }
 
-const displayCategoryItems = (category) => {
+/*const displayCategoryItems = (category) => {
     displayItemsScreen();
     items.forEach(item => {
         if(item.category == category){
             item.createCard();
         }
     });
-}
+}*/
 
+/* Ajoute un article au panier */
 const addToCart = (id) => {
     let item = JSON.parse(localStorage.getItem(id));
 
@@ -59,6 +65,7 @@ const addToCart = (id) => {
     }
 }
 
+/* Retire un article du panier */
 const removeToCart = (id) => {
     let item = JSON.parse(localStorage.getItem(id));
 
@@ -71,6 +78,7 @@ const removeToCart = (id) => {
     
 }
 
+/* Affiche les infos d'un article dans le panier */
 const createCartItem = (id,price, quantity) => {
     let cart = document.getElementById("cart-body");
     let body = document.createElement("p");
@@ -97,6 +105,7 @@ const createCartItem = (id,price, quantity) => {
     cart.appendChild(body);
 }
 
+/* Affiche le contenu du panier */
 const displayCart = () => {
     document.getElementById("cart-body").innerHTML = "";
     let cartKeys = Object.keys(localStorage);
@@ -111,6 +120,7 @@ const displayCart = () => {
     document.getElementById("cart-body").appendChild(totalEl);
 }
 
+/* Calcule le prix total du panier */
 const totalPrice = () => {
     let cartKeys = Object.keys(localStorage);
     let total;
@@ -128,6 +138,7 @@ const totalPrice = () => {
 
 /* Partie programme */
 document.addEventListener('DOMContentLoaded', () => {
+    /* Interaction avec les boutons */
     document.getElementById("allItems").addEventListener('click', () => {
         displayAllItems();
     })
