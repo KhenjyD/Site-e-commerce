@@ -25,7 +25,7 @@ const createCategorySpan = (category) => {
     return title;
 }
 
-/* Affiche tous les article dans des cards */
+/* Affiche tous les articles */
 const displayAllItems = () => {
     displayItemsScreen();
     let display = document.getElementById("items");
@@ -40,14 +40,39 @@ const displayAllItems = () => {
     display.appendChild(newRow);
 }
 
-/*const displayCategoryItems = (category) => {
+/* Affiche les articles d'une sous-catégorie */
+const displayCategoryItems = (category) => {
     displayItemsScreen();
+    let display = document.getElementById("items");
+    display.innerHTML = "";
+    display.appendChild(createCategorySpan(category));
+    let newRow = document.createElement("div");
+    newRow.className = "row";
+
     items.forEach(item => {
-        if(item.category == category){
-            item.createCard();
+        if(category == item.category){
+            newRow.appendChild(item.createCard());
         }
     });
-}*/
+    display.appendChild(newRow);
+}
+
+/* Affiche tous les article d'une grande catégorie */
+const displayAllCategoryItems = (category) => {
+    displayItemsScreen();
+    let display = document.getElementById("items");
+    display.innerHTML = "";
+    display.appendChild(createCategorySpan(category));
+    let newRow = document.createElement("div");
+    newRow.className = "row";
+
+    items.forEach(item => {
+        if(item.category.includes(category)){
+            newRow.appendChild(item.createCard());
+        }
+    });
+    display.appendChild(newRow);
+}
 
 /* Ajoute un article au panier */
 const addToCart = (id) => {
@@ -173,6 +198,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if(event.target.matches("#clearCart")){
             localStorage.clear();
             displayCart();
+        }
+
+        if(event.target.name == "category") {
+            displayCategoryItems(event.target.id);
+        }
+
+        if(event.target.name == "allCategory") {
+            displayAllCategoryItems(event.target.id);
         }
     })
 })
