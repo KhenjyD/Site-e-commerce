@@ -1,5 +1,6 @@
 body {
     background-image: url("/img/deco/bg.jpg");
+    background-attachment: fixed;
 }
 
 h4 {

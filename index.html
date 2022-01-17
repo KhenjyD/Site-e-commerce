@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,7 +17,7 @@
         <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-pill">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a id="welcomeScreen" class="navbar-brand" href="#">
               <h4><i class="bi bi-playstation"></i> PS Sphere</h4>
             </a>
             <button class="navbar-toggler text-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,6 +25,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="navbarAll" role="button" aria-expanded="false">
+                    Tout
+                  </a>
+                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarPS5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     PS5
@@ -37,7 +42,7 @@
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarPS5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarPS4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     PS4
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -48,7 +53,7 @@
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarPS5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarPS3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     PS3
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -59,7 +64,7 @@
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarPS5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarPS2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     PS2
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -69,7 +74,7 @@
                     <li><a class="dropdown-item" href="#">Jeu</a></li>
                   </ul>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarPS5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarPS1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       PS1
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -80,7 +85,7 @@
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarPS5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarPSP" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       PSP
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -91,7 +96,7 @@
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarPS5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarPSVITA" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       PSVITA
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -132,17 +137,17 @@
       </div>
 
       <!-- Ecran d'accueil -->
-      <div id="acceuil" class="text-center text-break">
+      <div id="accueil" class="text-center text-break">
         <img src="/img/deco/logo.png" class="rounded mx-auto d-block mb-3" alt="logo ps" id="logo">
         <h1>Bienvenue à Playstation Sphere !</h1>
         <h3 class="mb-3">Site de vente en ligne dédié à la marque Playstation toutes générations confondues.</h3>
-        <button type="button" class="btn btn-dark btn-lg rounded-pill">Découvrer nos produit ici !</button>
+        <button type="button" class="btn btn-dark btn-lg rounded-pill" id="allItems">Découvrer nos produit ici !</button>
         <img src="/img/deco/ps_trophies.png" class="img-fluid rounded mx-auto d-block" alt="trophé ps">
       </div>
 
       <!-- Afficher article -->
-      <div id="article" class="row">
-
+      <div id="items" class="container">
+        
       </div>
     </div>
 
